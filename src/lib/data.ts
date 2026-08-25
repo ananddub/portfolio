@@ -309,8 +309,8 @@ export const openSourceRepos = [
       name: "cartwave",
       description:
          "Full-stack cross-platform e-commerce mobile platform with React Native, Redux Toolkit, and Node.js Express REST API with MongoDB.",
-      url: "https://github.com/ananddub/fyrodb",
-      name: "fyrodb",
+      url: "https://github.com/ananddub/ferrodb",
+      name: "ferrodb",
       description: "A Redis-compatible in-memory key-value store written in Rust with lock-free concurrent hash map (EBR) outperforming multi-node clusters.",
       language: ["Rust"],
       topics: ["redis", "database", "lock-free", "rust"],
