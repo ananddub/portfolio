@@ -75,8 +75,8 @@ export const metadata: Metadata = {
    },
    twitter: {
       card: "summary_large_image",
-      site: "@jack718r",
-      creator: "@jack718r",
+      site: "@ananddub",
+      creator: "@ananddub",
       title: "Anand Dubey - Full Stack Developer | React, Next.js, Go, Python Expert",
       description:
          "Experienced Full Stack Developer with 13+ production apps. Expert in React, Next.js, Go, Python, AI/ML, Docker, AWS.",
@@ -97,7 +97,7 @@ const structuredData = {
    sameAs: [
       "https://github.com/ananddub",
       "https://www.linkedin.com/in/rana-dolui-89357728a/",
-      "https://x.com/jack718r",
+      "https://linkedin.com/in/ananddub/",
    ],
    address: {
       "@type": "PostalAddress",

@@ -1,6 +1,6 @@
 "use client";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-import { XIcon } from "./ui/XIcon";
+
 import { motion } from "framer-motion";
 import { Typewriter } from "./Typewriter";
 import { ParticleBurst } from "./ParticleBurst";
@@ -17,7 +17,7 @@ const socials = [
       label: "LinkedIn",
       icon: Linkedin,
    },
-   { url: "https://x.com/jack718r", label: "X", icon: XIcon },
+   
    { url: "mailto:duanand6@gmail.com", label: "Mail", icon: Mail },
 ];
 

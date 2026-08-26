@@ -35,8 +35,8 @@ export const metadata: Metadata = {
    },
    twitter: {
       card: "summary_large_image",
-      site: "@jack718r",
-      creator: "@jack718r",
+      site: "@ananddub",
+      creator: "@ananddub",
       title: "Blog — Anand Dubey",
       description:
          "Detailed, practical writing about software architecture, systems, web engineering, databases, AI, and developer tools.",

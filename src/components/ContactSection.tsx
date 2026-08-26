@@ -8,7 +8,7 @@ import {
    Loader2,
    CheckCircle,
 } from "lucide-react";
-import { XIcon } from "./ui/XIcon";
+
 import { useState } from "react";
 import { useTheme } from "@/lib/theme-provider";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,7 +24,7 @@ const socials = [
       label: "LinkedIn",
       url: "https://linkedin.com/in/ananddub/",
    },
-   { icon: XIcon, label: "X", url: "https://x.com/jack718r" },
+   
    { icon: Mail, label: "Mail", url: "mailto:duanand6@gmail.com" },
 ];
 

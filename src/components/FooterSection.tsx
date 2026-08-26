@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Download, Github, Linkedin, Mail } from "lucide-react";
-import { XIcon } from "./ui/XIcon";
+
 import { Container } from "./ui/Container";
 import { GlassButton } from "./ui/GlassButton";
 import { ContributionHeatmap } from "./ContributionHeatmap";
@@ -17,7 +17,7 @@ const actions = [
       variant: "accent" as const,
    },
    {
-      href: "https://cal.com/rana-dolui-0l0osz/15min?overlayCalendar=true",
+      href: "https://linkedin.com/in/ananddub/",
       icon: Calendar,
       label: "Book a call",
       variant: "glass" as const,
@@ -33,7 +33,7 @@ const actions = [
 
 const socials = [
    { href: "https://github.com/ananddub", label: "GitHub" },
-   { href: "https://x.com/jack718r", label: "Twitter" },
+   
    {
       href: "https://linkedin.com/in/ananddub/",
       label: "LinkedIn",
@@ -47,7 +47,7 @@ const socialIcons = [
       icon: Linkedin,
       label: "LinkedIn",
    },
-   { href: "https://x.com/jack718r", icon: XIcon, label: "X" },
+   
 ];
 
 // Evaluated once at module load — no need to recompute on every render.

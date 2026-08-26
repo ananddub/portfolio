@@ -1,17 +1,24 @@
 export const personalInfo = {
-   name: "Anand Dubey",
+   name: "Anand Kumar Dubey",
    role: "Software Engineer",
    tagline:
-      "Crafting 60 FPS mobile apps, high-throughput engines in Rust & Go, and scalable distributed systems.",
+      "Engineering 60 FPS mobile apps, high-throughput engines in Rust & Go, and scalable distributed systems.",
    email: "duanand6@gmail.com",
+   phone: "+91 8709501726",
    github: "https://github.com/ananddub",
+   linkedin: "https://linkedin.com/in/ananddub/",
    location: "India",
-   bio: "Software Engineer focused on cross-platform mobile development (React Native, Flutter), native Android (Kotlin / Jetpack Compose), and high-performance backend systems in Go & Rust. Experienced in building offline-first mobile apps, real-time voice & gRPC protocols, lock-free memory engines, and production deployments to Google Play Store.",
+   education: {
+      degree: "Bachelor of Computer Application (BCA)",
+      institution: "Vidya Vihar Institute of Technology",
+      period: "July 2022 – July 2025",
+   },
+   bio: "Software Engineer focused on high-performance mobile engineering (Flutter, React Native, Jetpack Compose), distributed microservices (Go, Rust, gRPC, UDP), and scalable database systems. Experienced in shipping production-grade mobile platforms to the Google Play Store and engineering lock-free concurrent in-memory engines.",
    about: {
       intro:
          "I am a Software Engineer who thrives at the intersection of fluid mobile user experiences and high-throughput systems architecture.",
       philosophy:
-         "I believe great software requires both uncompromising performance at the system level and obsessive attention to detail at the user interface.",
+         "Great software requires uncompromising performance at the systems level and obsessive attention to detail at the user interface.",
       hobbies: [
          "Distributed Systems Research",
          "Kernel & Systems Programming",
@@ -23,37 +30,36 @@ export const personalInfo = {
 
 export const experiences = [
    {
-      period: "2024 - Present",
-      role: "Software Engineer",
-      company: "Independent / Core Engineering",
+      period: "September 2025 – July 2026",
+      role: "Application Developer",
+      company: "Shap Digital Studios",
       description:
-         "Designing and developing high-throughput systems and mobile applications. Architected FerroDB (Redis-compatible in-memory database in Rust with lock-free EBR), Incord (distributed real-time communication platform with gRPC + UDP voice streaming), and CartWave (full-stack e-commerce mobile platform).",
+         "Engineered and shipped Equality Through Education (ETE) to the Google Play Store with in-app PDF caching engine and role-based authentication. Developed ThreadNest, a responsive cross-platform discussion platform in Flutter with Cloud Firestore and Karma algorithms.",
       technologies: [
-         "Go",
-         "Rust",
-         "React Native",
-         "Kotlin",
-         "Jetpack Compose",
-         "gRPC",
-         "Tokio",
-         "ScyllaDB",
+         "Flutter",
+         "Dart",
+         "Firebase Auth",
+         "Cloud Firestore",
+         "PDF Engine",
+         "Google Play Console",
+         "Routemaster",
       ],
    },
    {
-      period: "2023 - 2024",
-      role: "Mobile & Full-Stack Developer",
-      company: "Production Engineering",
+      period: "January 2025 – September 2025",
+      role: "Mobile Application Developer (Internship)",
+      company: "beyondNull",
       description:
-         "Engineered production-grade mobile applications with offline-first local storage, Redux state pipelines, and background services. Built and deployed live mobile apps to the Google Play Store.",
+         "Engineered SoundPulse high-performance audio streaming app with background playback, lock-screen controls, Zustand, and MMKV storage. Developed LudoArena 4-player turn-based board game engine with custom coordinate mapping and 60 FPS animations.",
       technologies: [
          "React Native",
-         "Flutter",
-         "Dart",
-         "Node.js",
-         "Express",
-         "MongoDB",
-         "Firebase",
-         "Google Play Console",
+         "TypeScript",
+         "Zustand",
+         "MMKV Storage",
+         "Redux Toolkit",
+         "RN Track Player",
+         "Animated API",
+         "Lottie",
       ],
    },
 ];
@@ -61,9 +67,9 @@ export const experiences = [
 export const projects = [
    {
       id: "openoxide",
-      title: "OpenOxide — Infrastructure & Node Control Engine",
+      title: "OpenOxide — Systems & Server Infrastructure Engine",
       description:
-         "High-performance server infrastructure orchestrator in Rust with compile-time checked SQLx queries, Docker socket daemon, and automated WireGuard peer provisioning.",
+         "Modular server infrastructure orchestrator in Rust with compile-time SQLx queries, Docker socket daemon API, automated WireGuard peer provisioning, and OpenAPI schema generation.",
       fullDescription:
          "OpenOxide is a modular server infrastructure control engine written in Rust. It manages host-level container environments via the raw Docker daemon socket, provisions automated WireGuard tunnels with dynamic keypair negotiation, and utilizes compile-time verified SQLx SQLite storage for zero-overhead node management.",
       tech: [
@@ -71,8 +77,9 @@ export const projects = [
          "Tokio",
          "SQLx",
          "SQLite",
-         "Docker Socket",
+         "Docker Socket API",
          "WireGuard",
+         "OpenAPI",
          "TypeScript",
       ],
       category: ["Systems & Infrastructure"],
@@ -81,9 +88,9 @@ export const projects = [
    },
    {
       id: "ferrodb",
-      title: "FerroDB — Lock-Free In-Memory Database Engine",
+      title: "FerroDB — Redis-Compatible Lock-Free In-Memory Database",
       description:
-         "High-throughput Redis-compatible in-memory key-value database engine in Rust with lock-free concurrent hash map (EBR) and RESP2/RESP3 protocol.",
+         "High-throughput in-memory key-value database engine in Rust with custom lock-free concurrent hash map (EBR), seqlock mutation, and RESP2/RESP3 protocol.",
       fullDescription:
          "FerroDB is a distributed in-memory key-value database built in Rust. It utilizes a custom sharded lock-free concurrent hash map with Epoch-Based Reclamation (EBR) and per-key seqlock for safe concurrent in-place mutations. Implements zero-copy RESP2/RESP3 parsers, TTL key expiration, ZSet skiplist, transactions (MULTI/EXEC), lock-free Pub/Sub, and RDB binary persistence.",
       tech: [
@@ -101,23 +108,64 @@ export const projects = [
    },
    {
       id: "incord",
-      title: "Incord — Real-Time Voice & Chat Platform",
+      title: "Incord — Full-Stack Real-Time Voice & Chat Platform",
       description:
-         "Enterprise distributed real-time platform with dual-transport architecture (Go gRPC state + dedicated UDP voice sockets) and native Jetpack Compose Android client.",
+         "Enterprise-grade distributed Discord-like platform with Go dual-transport backend (gRPC + dedicated UDP voice) and 17+ screen Kotlin Jetpack Compose client with LiveKit WebRTC.",
       fullDescription:
-         "Incord is an end-to-end communication platform featuring a distributed Go backend with gRPC for transactional state and dedicated UDP voice server for low-latency voice packet forwarding. Backed by ScyllaDB, TimescaleDB, Redis, Redpanda Kafka, and a 17+ screen native Android client in Kotlin with Jetpack Compose, LiveKit WebRTC, and Room DB offline caching.",
+         "Incord is an end-to-end communication platform featuring a distributed Go backend with gRPC for transactional state and dedicated UDP voice server for low-latency voice packet forwarding. Backed by ScyllaDB, TimescaleDB, Redis, Redpanda Kafka, OpenFGA (RBAC), and a 17+ screen native Android client in Kotlin with Jetpack Compose, LiveKit WebRTC, and Room DB offline caching.",
       tech: [
-         "Go",
+         "Go (Golang)",
+         "gRPC",
+         "UDP Voice Server",
+         "ScyllaDB",
+         "TimescaleDB",
          "Kotlin",
          "Jetpack Compose",
-         "gRPC",
-         "UDP Sockets",
          "LiveKit WebRTC",
-         "ScyllaDB",
-         "Redis",
+         "Room DB",
       ],
       category: ["Mobile App", "Systems & Infrastructure"],
       github: "https://github.com/ananddub/incord",
+      featured: true,
+   },
+   {
+      id: "ete",
+      title: "Equality Through Education (ETE) — Live Mobile Platform",
+      description:
+         "Production-grade educational platform deployed on Google Play Store serving students with centralized curriculum and in-app PDF caching engine.",
+      fullDescription:
+         "Equality Through Education (ETE) is a live production mobile application deployed on the Google Play Store serving students across institutions. It features an in-app PDF rendering and caching engine with background downloading and local storage for seamless offline access, role-based authentication, and Firebase cloud data synchronization.",
+      tech: [
+         "Flutter",
+         "Dart",
+         "Firebase Auth",
+         "Cloud Firestore",
+         "Firebase Storage",
+         "PDF Engine",
+         "Google Play Store Live",
+      ],
+      category: ["Mobile App"],
+      github: "https://github.com/ananddub",
+      demo: "https://play.google.com/store",
+      featured: true,
+   },
+   {
+      id: "soundpulse",
+      title: "SoundPulse — High-Performance Audio Streaming Mobile App",
+      description:
+         "Audio streaming mobile app featuring background audio playback, notification/lock-screen controls, Zustand, and MMKV storage for instant hydration.",
+      fullDescription:
+         "SoundPulse is a cross-platform music and audio streaming application built with React Native. Features background playback with React Native Track Player, lock-screen controls, Zustand lightweight state management, dynamic artwork color extraction, and MMKV storage for high-throughput local caching.",
+      tech: [
+         "React Native",
+         "TypeScript",
+         "Zustand",
+         "React Native Track Player",
+         "MMKV Storage",
+         "TailwindCSS",
+      ],
+      category: ["Mobile App"],
+      github: "https://github.com/ananddub/soundpulse",
       featured: true,
    },
    {
@@ -142,17 +190,18 @@ export const projects = [
    },
    {
       id: "ludoarena",
-      title: "LudoArena — Multiplayer Game Engine",
+      title: "LudoArena — Real-Time Multiplayer Board Game Engine",
       description:
-         "Turn-based 4-player multiplayer board game engine with collision algorithms, safe-spot logic, and 60 FPS animations.",
+         "Turn-based 4-player multiplayer board game engine with collision algorithms, safe-spot validation, and 60 FPS animations.",
       fullDescription:
-         "LudoArena is a cross-platform multiplayer game engine built with React Native. It utilizes coordinate mapping matrices for board navigation, custom collision detection, dynamic dice physics, and interactive SFX with zero frame drops.",
+         "LudoArena is a cross-platform multiplayer game engine built with React Native. It utilizes coordinate mapping matrices ('PlotData') for board navigation, custom collision detection, dynamic 3D dice physics, synchronized audio SFX triggers, and celebration modal dialogs.",
       tech: [
          "React Native",
          "TypeScript",
          "Redux Toolkit",
          "Animated API",
          "Lottie",
+         "Sound Utility",
       ],
       category: ["Mobile App"],
       github: "https://github.com/ananddub/ludoarena",
@@ -160,11 +209,11 @@ export const projects = [
    },
    {
       id: "threadnest",
-      title: "ThreadNest — Cross-Platform Community App",
+      title: "ThreadNest — Responsive Community Discussion Platform",
       description:
          "Full-stack discussion community platform built with Flutter and Firebase, featuring real-time voting and hierarchical nested comments.",
       fullDescription:
-         "ThreadNest is an adaptive community platform built with Flutter and Dart. Features Google and guest authentication, real-time post creation with Cloud Firestore, Karma voting algorithms, and Routemaster navigation.",
+         "ThreadNest is an adaptive community platform built with Flutter and Dart. Features Google and guest authentication, real-time post creation with Cloud Firestore, Karma voting algorithms, and Routemaster declarative navigation.",
       tech: [
          "Flutter",
          "Dart",
@@ -176,47 +225,28 @@ export const projects = [
       github: "https://github.com/ananddub/threadnest",
       featured: true,
    },
-   {
-      id: "ete",
-      title: "Equality Through Education (ETE)",
-      description:
-         "Live production mobile platform deployed on Google Play Store serving students across institutions.",
-      fullDescription:
-         "Equality Through Education (ETE) is a live production mobile application deployed on the Google Play Store serving students across institutions. It features an in-app PDF reader with background download pipelines, local file caching, role-based authentication, and Firebase cloud data synchronization.",
-      tech: [
-         "Flutter",
-         "Dart",
-         "Firebase",
-         "Cloud Firestore",
-         "Google Play Store",
-      ],
-      category: ["Mobile App"],
-      github: "https://github.com/ananddub",
-      demo: "https://play.google.com/store",
-      featured: true,
-   },
 ];
 
 export const skills = {
    mobile: {
       title: "MOBILE ENGINEERING",
-      tech: "React Native, Flutter, Kotlin, Jetpack Compose, Riverpod, Redux Toolkit, Zustand, MMKV",
-      description: "Building 60 FPS, offline-first cross-platform and native Android applications",
+      tech: "Flutter, React Native, Jetpack Compose, Reanimated, Riverpod, Redux Toolkit, Zustand, Kotlin Coroutines, MMKV, Room DB",
+      description: "Building 60 FPS offline-first apps, local caching, background audio services, and Google Play Store deployments",
    },
    backend: {
-      title: "SYSTEMS & BACKEND",
-      tech: "Go (Golang), Rust, gRPC, Protobuf, UDP Sockets, Fiber, Tokio, SQLx, FastAPI",
-      description: "High-concurrency microservices, distributed systems, and low-latency APIs",
+      title: "SYSTEMS & BACKEND APIS",
+      tech: "Rust (Axum/Actix/Tokio), Go (gRPC/Fiber), Node.js, Express.js, Spring Boot, UDP Sockets, WebSockets, SSE",
+      description: "High-concurrency microservices, distributed systems, lock-free memory engines, and low-latency APIs",
    },
    database: {
-      title: "DATABASES & STREAMING",
-      tech: "PostgreSQL, ScyllaDB, TimescaleDB, Redis, Redpanda (Kafka), MongoDB, MinIO, Firebase",
-      description: "Distributed persistence, time-series telemetry, and pub/sub streaming",
+      title: "DATABASES & MESSAGING",
+      tech: "PostgreSQL, MySQL, MariaDB, SQLite, MongoDB, Redis, ScyllaDB, TimescaleDB, NATS, Kafka, Redpanda, MQTT",
+      description: "Distributed persistence, time-series telemetry, pub/sub streaming, and distributed locks",
    },
    devops: {
-      title: "DEVOPS & INFRASTRUCTURE",
-      tech: "Docker, Kubernetes, Nix Flakes, NixOS, Linux, GitHub Actions CI/CD, Grafana, Prometheus",
-      description: "Reproducible container environments, system observability, and automation",
+      title: "DEVOPS & DEPLOYMENT",
+      tech: "Docker, Kubernetes, Docker Swarm, Nginx, Traefik, Caddy, AWS EC2, GitHub Actions CI/CD, Nix Flakes, NixOS, Linux cgroups",
+      description: "Reproducible container environments, system observability, Nixpacks, Railpack, and automation",
    },
 };
 
@@ -255,6 +285,17 @@ export const openSourceRepos = [
       forks: true,
    },
    {
+      name: "soundpulse",
+      description:
+         "High-performance mobile audio streaming application featuring background audio playback, lock-screen controls, Zustand, and MMKV storage.",
+      url: "https://github.com/ananddub/soundpulse",
+      isrelease: true,
+      language: ["TypeScript", "JavaScript"],
+      topics: ["react-native", "zustand", "audio-player", "mmkv"],
+      stars: true,
+      forks: true,
+   },
+   {
       name: "cartwave",
       description:
          "Full-stack cross-platform e-commerce mobile platform with React Native, Redux Toolkit, and Node.js Express REST API with MongoDB.",
@@ -265,6 +306,28 @@ export const openSourceRepos = [
       stars: true,
       forks: true,
    },
+   {
+      name: "ludoarena",
+      description:
+         "Turn-based 4-player multiplayer board game engine with collision algorithms, safe-spot logic, and 60 FPS animations.",
+      url: "https://github.com/ananddub/ludoarena",
+      isrelease: true,
+      language: ["TypeScript", "JavaScript"],
+      topics: ["react-native", "redux-toolkit", "game-engine"],
+      stars: true,
+      forks: true,
+   },
+   {
+      name: "threadnest",
+      description:
+         "Responsive cross-platform discussion forum platform in Flutter with Cloud Firestore, Karma calculation, and Routemaster.",
+      url: "https://github.com/ananddub/threadnest",
+      isrelease: true,
+      language: ["Dart"],
+      topics: ["flutter", "firebase", "community"],
+      stars: true,
+      forks: true,
+   },
 ];
 
 export const services = [
@@ -272,7 +335,7 @@ export const services = [
       id: 1,
       title: "Cross-Platform Mobile Apps",
       description:
-         "High-performance mobile apps built with React Native and Flutter. Fluid 60 FPS UI, offline-first caching, background services, and Google Play Store production deployment.",
+         "High-performance mobile apps built with React Native and Flutter. Fluid 60 FPS UI, offline-first caching, background audio services, and Google Play Store production deployment.",
       icon: "Smartphone",
       features: [
          "React Native & Flutter",
@@ -323,17 +386,17 @@ export const services = [
 ];
 
 export const technologies = [
-   { name: "Go", category: "Languages", icon: "SiGo", color: "#00ADD8" },
    { name: "Rust", category: "Languages", icon: "SiRust", color: "#000000" },
-   { name: "Kotlin", category: "Languages", icon: "SiKotlin", color: "#7F52FF" },
-   { name: "Dart", category: "Languages", icon: "SiDart", color: "#0175C2" },
+   { name: "Go", category: "Languages", icon: "SiGo", color: "#00ADD8" },
    { name: "TypeScript", category: "Languages", icon: "SiTypescript", color: "#3178C6" },
    { name: "JavaScript", category: "Languages", icon: "SiJavascript", color: "#F7DF1E" },
-   { name: "Python", category: "Languages", icon: "SiPython", color: "#3776AB" },
+   { name: "Kotlin", category: "Languages", icon: "SiKotlin", color: "#7F52FF" },
+   { name: "Dart", category: "Languages", icon: "SiDart", color: "#0175C2" },
    { name: "C++", category: "Languages", icon: "SiCplusplus", color: "#00599C" },
+   { name: "Python", category: "Languages", icon: "SiPython", color: "#3776AB" },
    { name: "Bash", category: "Languages", icon: "SiGnubash", color: "#4EAA25" },
-   { name: "React Native", category: "Mobile", icon: "SiReact", color: "#61DAFB" },
    { name: "Flutter", category: "Mobile", icon: "SiFlutter", color: "#02569B" },
+   { name: "React Native", category: "Mobile", icon: "SiReact", color: "#61DAFB" },
    { name: "Android Studio", category: "Mobile", icon: "SiAndroidstudio", color: "#3DDC84" },
    { name: "Redux Toolkit", category: "Mobile", icon: "SiRedux", color: "#764ABC" },
    { name: "TailwindCSS", category: "Mobile", icon: "SiTailwindcss", color: "#06B6D4" },
