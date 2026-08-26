@@ -7,18 +7,17 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 const SECTIONS = [
    { id: "oss", label: "OSS", shortLabel: "OSS" },
+   { id: "experience", label: "Experience", shortLabel: "Exp" },
    { id: "work", label: "Projects", shortLabel: "Work" },
-   { id: "skills", label: "Skills", shortLabel: "Sk" },
-   { id: "blog", label: "Writing", shortLabel: "Blog" },
-   { id: "experience", label: "Exp", shortLabel: "Exp" },
-   { id: "contact", label: "Contact", shortLabel: "Ct" },
+   { id: "skills", label: "Skills", shortLabel: "Skills" },
+   { id: "services", label: "Services", shortLabel: "Serv" },
+   { id: "contact", label: "Contact", shortLabel: "Contact" },
 ];
 
 export function BottomNav() {
    const [activeSection, setActiveSection] = useState("home");
    const pathname = usePathname();
    const isHomePage = pathname === "/";
-   const isBlogPage = pathname.startsWith("/blog");
 
    const scrollTo = useCallback((id: string) => {
       if (id === "home") {
@@ -68,31 +67,22 @@ export function BottomNav() {
             >
                Home
             </Link>
-            {isHomePage && SECTIONS.map(({ id, label, shortLabel }) => (
-               <button
-                  key={id}
-                  type="button"
-                  onClick={() => scrollTo(id)}
-                  className={`rounded-full shrink-0 px-2 md:px-3 py-1 md:py-1.5 font-mono text-[10px] md:text-xs uppercase tracking-widest transition-colors ${
-                     activeSection === id
-                        ? "bg-accent/20 text-accent"
-                        : "text-fg-muted hover:text-fg-primary"
-                  }`}
-               >
-                  <span className="sm:hidden">{shortLabel}</span>
-                  <span className="hidden sm:inline">{label}</span>
-               </button>
-            ))}
-            <Link
-               href="/blog"
-               className={`rounded-full shrink-0 px-2 md:px-3 py-1 md:py-1.5 font-mono text-[10px] md:text-xs uppercase tracking-widest transition-colors ${
-                  isBlogPage
-                     ? "bg-accent/20 text-accent"
-                     : "text-fg-muted hover:text-fg-primary"
-               }`}
-            >
-               Blog
-            </Link>
+            {isHomePage &&
+               SECTIONS.map(({ id, label, shortLabel }) => (
+                  <button
+                     key={id}
+                     type="button"
+                     onClick={() => scrollTo(id)}
+                     className={`rounded-full shrink-0 px-2 md:px-3 py-1 md:py-1.5 font-mono text-[10px] md:text-xs uppercase tracking-widest transition-colors ${
+                        activeSection === id
+                           ? "bg-accent/20 text-accent"
+                           : "text-fg-muted hover:text-fg-primary"
+                     }`}
+                  >
+                     <span className="sm:hidden">{shortLabel}</span>
+                     <span className="hidden sm:inline">{label}</span>
+                  </button>
+               ))}
             <div className="w-px h-4 md:h-5 mx-0.5 md:mx-1 bg-border-primary shrink-0" />
             <AnimatedThemeToggler />
          </div>

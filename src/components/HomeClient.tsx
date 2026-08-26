@@ -4,7 +4,6 @@ import { lazy, Suspense, useState } from "react";
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectModal } from "@/components/ProjectModal";
 import type { projects as projectsData } from "@/lib/data";
-import type { BlogPreviewItem } from "@/components/BlogPreviewSection";
 import type { GitHubStatsByRepo } from "@/lib/github";
 
 // Above-fold: load eagerly
@@ -20,11 +19,6 @@ const MoreProjectsSection = lazy(() =>
 const SkillsSection = lazy(() =>
    import("@/components/SkillsSection").then((module) => ({
       default: module.SkillsSection,
-   })),
-);
-const BlogPreviewSection = lazy(() =>
-   import("@/components/BlogPreviewSection").then((module) => ({
-      default: module.BlogPreviewSection,
    })),
 );
 const ServicesSection = lazy(() =>
@@ -46,7 +40,6 @@ const FooterSection = lazy(() =>
 type Project = (typeof projectsData)[number];
 
 interface HomeClientProps {
-   blogs: BlogPreviewItem[];
    githubStats: GitHubStatsByRepo;
 }
 
@@ -54,7 +47,7 @@ function SectionFallback() {
    return <div className="min-h-80" aria-hidden="true" />;
 }
 
-export function HomeClient({ blogs, githubStats }: HomeClientProps) {
+export function HomeClient({ githubStats }: HomeClientProps) {
    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
    const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -104,13 +97,6 @@ export function HomeClient({ blogs, githubStats }: HomeClientProps) {
                      <SkillsSection />
                   </section>
                </Suspense>
-
-               <Suspense fallback={<SectionFallback />}>
-                  <section id="blog">
-                     <BlogPreviewSection blogs={blogs} />
-                  </section>
-               </Suspense>
-
 
                <Suspense fallback={<SectionFallback />}>
                   <section id="services">
