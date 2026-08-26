@@ -33,7 +33,7 @@ import {
    SiNginx,
    SiNodedotjs,
    SiOpenapiinitiative,
-   SiOpenfga,
+   
    SiOpenjdk,
    SiPostgresql,
    SiPrisma,
@@ -91,7 +91,7 @@ const SI_ICONS: Record<string, IconComponent | null> = {
    SiNginx,
    SiNodedotjs,
    SiOpenapiinitiative,
-   SiOpenfga,
+   
    SiOpenjdk,
    SiPostgresql,
    SiPrisma,

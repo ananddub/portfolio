@@ -311,7 +311,7 @@ export const technologies = [
    { name: "MongoDB", category: "Backend & Microservices", icon: "SiMongodb", color: "#47A248" },
    { name: "Cassandra / ScyllaDB", category: "Backend & Microservices", icon: "SiApachecassandra", color: "#556880" },
    { name: "AWS S3", category: "Backend & Microservices", icon: "SiAmazonwebservices", color: "#FF9900" },
-   { name: "OpenFGA", category: "Backend & Microservices", icon: "SiOpenfga", color: "#101828" },
+   { name: "OpenFGA", category: "Backend & Microservices", icon: "SiAuth0", color: "#101828" },
    { name: "Materialize", category: "Backend & Microservices", icon: "SiMaterialdesign", color: "#757575" },
    { name: "Temporal", category: "Backend & Microservices", icon: "SiTemporal", color: "#000000" },
    { name: "Actix", category: "Backend & Microservices", icon: "SiRust", color: "#CE412B" },
