@@ -112,27 +112,6 @@ export const projects = [
       featured: true,
    },
    {
-      id: "blinkit-android",
-      title: "Blinkit Quick-Commerce — Full-Stack Android App",
-      description:
-         "Complete 10-minute grocery delivery Android app with User and Admin modules, Firebase Phone OTP, Room local cart, Razorpay payment, and real-time order dispatching.",
-      fullDescription:
-         "Blinkit Quick-Commerce is an end-to-end native Android application built with Kotlin, MVVM, and Firebase. Features separate User and Admin applications: browse categories with shimmer loading, dynamic image sliders, Room local database caching, address management, Razorpay payment gateway integration, real-time live order tracking, and an administrative inventory control dashboard for real-time order state updates.",
-      tech: [
-         "Kotlin",
-         "Android XML",
-         "MVVM",
-         "Firebase Auth",
-         "Room DB",
-         "Razorpay",
-         "Retrofit",
-         "Glide",
-      ],
-      category: ["Mobile App"],
-      github: "https://github.com/ananddub/blinkit-android",
-      featured: true,
-   },
-   {
       id: "incord",
       title: "Incord (Discord Clone) — Real-Time Voice & Chat Platform",
       description:
@@ -377,17 +356,6 @@ export const openSourceRepos = [
       isrelease: true,
       language: ["Rust"],
       topics: ["redis", "database", "lock-free", "rust"],
-      stars: true,
-      forks: true,
-   },
-   {
-      name: "blinkit-android",
-      description:
-         "A full-featured Blinkit Quick-Commerce Clone Android app in Kotlin with User & Admin modules, Firebase OTP, Room DB, and Razorpay.",
-      url: "https://github.com/ananddub/blinkit-android",
-      isrelease: true,
-      language: ["Kotlin", "XML"],
-      topics: ["android", "kotlin", "mvvm", "firebase", "razorpay"],
       stars: true,
       forks: true,
    },
