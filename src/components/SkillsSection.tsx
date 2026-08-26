@@ -3,55 +3,50 @@
 import { motion } from "framer-motion";
 import {
    SiAmazonwebservices,
+   SiAndroid,
    SiApachekafka,
-   SiClerk,
-   SiCmake,
+   SiCaddy,
    SiCplusplus,
+   SiDart,
    SiDocker,
-   SiExpo,
    SiExpress,
    SiFastapi,
    SiFirebase,
-   SiFlask,
    SiFlutter,
-   SiFramer,
+   SiGit,
+   SiGitea,
+   SiGithub,
    SiGithubactions,
+   SiGitlab,
    SiGnubash,
    SiGo,
-   SiGooglegemini,
-   SiGrafana,
-   SiGraphql,
    SiJavascript,
    SiKotlin,
    SiKubernetes,
-   SiLangchain,
    SiLinux,
+   SiMariadb,
    SiMongodb,
-   SiNextdotjs,
+   SiMqtt,
+   SiMysql,
+   SiNatsdotio,
    SiNginx,
    SiNixos,
    SiNodedotjs,
-   SiOpenai,
+   SiOpenapiinitiative,
    SiPostgresql,
-   SiPrisma,
-   SiPrometheus,
-   SiProton,
    SiPython,
-   SiRabbitmq,
-   SiRazorpay,
    SiReact,
    SiRedis,
+   SiRedux,
    SiRust,
-   SiSelenium,
-   SiSentry,
    SiSocketdotio,
-   SiSqlalchemy,
-   SiSteam,
-   SiSvelte,
+   SiSpringboot,
+   SiSqlite,
+   SiSupabase,
+   SiSwagger,
    SiTailwindcss,
+   SiTraefikproxy,
    SiTypescript,
-   SiVite,
-   SiWine,
 } from "react-icons/si";
 import { technologies } from "@/lib/data";
 import { Container } from "./ui/Container";
@@ -59,67 +54,52 @@ import { SectionHeading } from "./ui/SectionHeading";
 
 type IconComponent = React.ComponentType<{ size?: number; className?: string }>;
 
-// Explicit map — only the icons actually used in data.ts.
-// This lets the bundler tree-shake the ~3,000 other react-icons/si icons.
-// Icons marked null are absent from this react-icons version; those
-// skill badges will render text-only (no icon), which is intentional.
 const SI_ICONS: Record<string, IconComponent | null> = {
    SiAmazonwebservices,
+   SiAndroid,
    SiApachekafka,
-   SiClerk,
-   SiCmake,
-   SiConvex: null,      // not in installed react-icons version
+   SiCaddy,
    SiCplusplus,
+   SiDart,
    SiDocker,
-   SiExpo,
    SiExpress,
    SiFastapi,
    SiFirebase,
-   SiFlask,
    SiFlutter,
-   SiFramer,
+   SiGit,
+   SiGitea,
+   SiGithub,
    SiGithubactions,
+   SiGitlab,
    SiGnubash,
    SiGo,
-   SiGooglegemini,
-   SiGrafana,
-   SiGraphql,
-   SiGrpc: null,        // not in installed react-icons version
    SiJavascript,
    SiKotlin,
    SiKubernetes,
-   SiLangchain,
    SiLinux,
+   SiMariadb,
    SiMongodb,
-   SiNewspaper: null,   // not in installed react-icons version
-   SiNextdotjs,
+   SiMqtt,
+   SiMysql,
+   SiNatsdotio,
    SiNginx,
    SiNixos,
    SiNodedotjs,
-   SiOpenai,
-   SiPinecone: null,    // not in installed react-icons version
-   SiPipewire: null,    // not in installed react-icons version
+   SiOpenapiinitiative,
    SiPostgresql,
-   SiPrisma,
-   SiPrometheus,
-   SiProton,
    SiPython,
-   SiRabbitmq,
-   SiRazorpay,
    SiReact,
    SiRedis,
+   SiRedux,
    SiRust,
-   SiSelenium,
-   SiSentry,
    SiSocketdotio,
-   SiSqlalchemy,
-   SiSteam,
-   SiSvelte,
+   SiSpringboot,
+   SiSqlite,
+   SiSupabase,
+   SiSwagger,
    SiTailwindcss,
+   SiTraefikproxy,
    SiTypescript,
-   SiVite,
-   SiWine,
-   SiZustand: null,     // not in installed react-icons version
 };
 
 function getIcon(name: string): IconComponent | null {
@@ -175,11 +155,10 @@ function SkillBadge({ tech }: { tech: (typeof technologies)[number] }) {
 export function SkillsSection() {
    return (
       <Container className="py-[12vw] md:py-20">
-         <SectionHeading number="04" title="Skills & Expertise" />
+         <SectionHeading number="04" title="Technical Skills" />
 
          <p className="mb-[12vw] md:mb-16 max-w-2xl text-[4vw] md:text-xl leading-relaxed text-fg-secondary">
-            The tools I reach for when building — grouped by where they sit in
-            the stack. Hover any badge to see its brand color.
+            Comprehensive technical arsenal across mobile, distributed systems, infrastructure, and developer tooling.
          </p>
 
          <div className="divide-y divide-border-primary">
@@ -207,7 +186,7 @@ export function SkillsSection() {
                         </h3>
                      </div>
                      <span className="ml-[6vw] md:ml-8 mt-[1vw] md:mt-1.5 block font-mono text-[2.3vw] md:text-[10px] uppercase tracking-widest text-fg-muted">
-                        {category.skills.length} tools
+                        {category.skills.length} technologies
                      </span>
                   </div>
 
