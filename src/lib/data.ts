@@ -134,24 +134,6 @@ export const projects = [
       featured: true,
    },
    {
-      id: "chatconnect",
-      title: "ChatConnect — Real-Time SwiftUI & Firebase Chat App",
-      description:
-         "Developed a real-time chat application using SwiftUI and Firebase, enabling seamless one-to-one messaging, user authentication, and Cloud Firestore real-time synchronization.",
-      fullDescription:
-         "ChatConnect is a native iOS application built with Swift and SwiftUI. Implements Firebase Authentication for secure user registration, session management, and Cloud Firestore for real-time message sync with optimized data models for conversations and message history.",
-      tech: [
-         "Swift",
-         "SwiftUI",
-         "Firebase Auth",
-         "Cloud Firestore",
-         "iOS Native",
-      ],
-      category: ["Mobile App"],
-      github: "https://github.com/ananddub",
-      featured: true,
-   },
-   {
       id: "ete",
       title: "Equality Through Education (ETE) — Live Mobile Platform",
       description:
