@@ -266,3 +266,91 @@ export const openSourceRepos = [
       forks: true,
    },
 ];
+
+export const services = [
+   {
+      id: 1,
+      title: "Cross-Platform Mobile Apps",
+      description:
+         "High-performance mobile apps built with React Native and Flutter. Fluid 60 FPS UI, offline-first caching, background services, and Google Play Store production deployment.",
+      icon: "Smartphone",
+      features: [
+         "React Native & Flutter",
+         "Native Android (Compose)",
+         "Offline Storage (MMKV/Room)",
+         "Google Play Store Deploy",
+      ],
+   },
+   {
+      id: 2,
+      title: "High-Throughput Backends",
+      description:
+         "Scalable backend architectures written in Go and Rust. Low-latency gRPC APIs, dedicated UDP voice protocols, and real-time WebSocket communication.",
+      icon: "Server",
+      features: [
+         "Go (Fiber/gRPC) & Rust (Tokio)",
+         "gRPC & Protocol Buffers",
+         "UDP Voice Socket Engines",
+         "Distributed Pub/Sub",
+      ],
+   },
+   {
+      id: 3,
+      title: "Distributed Databases & Storage",
+      description:
+         "Designing resilient data layers with ScyllaDB, PostgreSQL, TimescaleDB, Redis caching, and MinIO S3 object storage pipelines.",
+      icon: "Globe",
+      features: [
+         "PostgreSQL & TimescaleDB",
+         "ScyllaDB & Redis",
+         "Redpanda / Kafka Streaming",
+         "MinIO S3 Object Storage",
+      ],
+   },
+   {
+      id: 4,
+      title: "DevOps & Cloud Systems",
+      description:
+         "Containerization with Docker Compose, Kubernetes orchestration, NixOS reproducible systems, and automated GitHub Actions CI/CD.",
+      icon: "Brain",
+      features: [
+         "Docker & Kubernetes",
+         "Nix Flakes / NixOS",
+         "GitHub Actions CI/CD",
+         "Prometheus & Grafana",
+      ],
+   },
+];
+
+export const technologies = [
+   { name: "Go", category: "Languages", icon: "SiGo", color: "#00ADD8" },
+   { name: "Rust", category: "Languages", icon: "SiRust", color: "#000000" },
+   { name: "Kotlin", category: "Languages", icon: "SiKotlin", color: "#7F52FF" },
+   { name: "Dart", category: "Languages", icon: "SiDart", color: "#0175C2" },
+   { name: "TypeScript", category: "Languages", icon: "SiTypescript", color: "#3178C6" },
+   { name: "JavaScript", category: "Languages", icon: "SiJavascript", color: "#F7DF1E" },
+   { name: "Python", category: "Languages", icon: "SiPython", color: "#3776AB" },
+   { name: "C++", category: "Languages", icon: "SiCplusplus", color: "#00599C" },
+   { name: "Bash", category: "Languages", icon: "SiGnubash", color: "#4EAA25" },
+   { name: "React Native", category: "Mobile", icon: "SiReact", color: "#61DAFB" },
+   { name: "Flutter", category: "Mobile", icon: "SiFlutter", color: "#02569B" },
+   { name: "Android Studio", category: "Mobile", icon: "SiAndroidstudio", color: "#3DDC84" },
+   { name: "Redux Toolkit", category: "Mobile", icon: "SiRedux", color: "#764ABC" },
+   { name: "TailwindCSS", category: "Mobile", icon: "SiTailwindcss", color: "#06B6D4" },
+   { name: "Node.js", category: "Backend", icon: "SiNodedotjs", color: "#339933" },
+   { name: "Express", category: "Backend", icon: "SiExpress", color: "#000000" },
+   { name: "FastAPI", category: "Backend", icon: "SiFastapi", color: "#009688" },
+   { name: "PostgreSQL", category: "Database", icon: "SiPostgresql", color: "#4169E1" },
+   { name: "MongoDB", category: "Database", icon: "SiMongodb", color: "#47A248" },
+   { name: "Redis", category: "Database", icon: "SiRedis", color: "#DC382D" },
+   { name: "Firebase", category: "Database", icon: "SiFirebase", color: "#DD2C00" },
+   { name: "Docker", category: "DevOps", icon: "SiDocker", color: "#2496ED" },
+   { name: "Kubernetes", category: "DevOps", icon: "SiKubernetes", color: "#326CE5" },
+   { name: "Nginx", category: "DevOps", icon: "SiNginx", color: "#009639" },
+   { name: "GitHub Actions", category: "DevOps", icon: "SiGithubactions", color: "#2088FF" },
+   { name: "Grafana", category: "DevOps", icon: "SiGrafana", color: "#F46800" },
+   { name: "Prometheus", category: "DevOps", icon: "SiPrometheus", color: "#E6522C" },
+   { name: "Kafka", category: "DevOps", icon: "SiApachekafka", color: "#231F20" },
+   { name: "Linux", category: "DevOps", icon: "SiLinux", color: "#FCC624" },
+   { name: "Nix", category: "DevOps", icon: "SiNixos", color: "#5277C3" },
+];
