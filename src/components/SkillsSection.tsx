@@ -4,49 +4,54 @@ import { motion } from "framer-motion";
 import {
    SiAmazonwebservices,
    SiAndroid,
+   SiAnsible,
+   SiApachecassandra,
    SiApachekafka,
-   SiCaddy,
-   SiCplusplus,
    SiDart,
    SiDocker,
+   SiDrizzle,
    SiExpress,
    SiFastapi,
    SiFirebase,
    SiFlutter,
    SiGit,
-   SiGitea,
    SiGithub,
    SiGithubactions,
-   SiGitlab,
    SiGnubash,
    SiGo,
    SiJavascript,
+   SiJenkins,
+   SiJetpackcompose,
    SiKotlin,
    SiKubernetes,
    SiLinux,
-   SiMariadb,
+   SiMaterialdesign,
    SiMongodb,
    SiMqtt,
    SiMysql,
    SiNatsdotio,
    SiNginx,
-   SiNixos,
    SiNodedotjs,
    SiOpenapiinitiative,
+   SiOpenfga,
+   SiOpenjdk,
    SiPostgresql,
+   SiPrisma,
    SiPython,
    SiReact,
    SiRedis,
    SiRedux,
    SiRust,
    SiSocketdotio,
-   SiSpringboot,
    SiSqlite,
    SiSupabase,
+   SiSwift,
    SiSwagger,
    SiTailwindcss,
+   SiTemporal,
    SiTraefikproxy,
    SiTypescript,
+   SiVitest,
 } from "react-icons/si";
 import { technologies } from "@/lib/data";
 import { Container } from "./ui/Container";
@@ -57,49 +62,54 @@ type IconComponent = React.ComponentType<{ size?: number; className?: string }>;
 const SI_ICONS: Record<string, IconComponent | null> = {
    SiAmazonwebservices,
    SiAndroid,
+   SiAnsible,
+   SiApachecassandra,
    SiApachekafka,
-   SiCaddy,
-   SiCplusplus,
    SiDart,
    SiDocker,
+   SiDrizzle,
    SiExpress,
    SiFastapi,
    SiFirebase,
    SiFlutter,
    SiGit,
-   SiGitea,
    SiGithub,
    SiGithubactions,
-   SiGitlab,
    SiGnubash,
    SiGo,
    SiJavascript,
+   SiJenkins,
+   SiJetpackcompose,
    SiKotlin,
    SiKubernetes,
    SiLinux,
-   SiMariadb,
+   SiMaterialdesign,
    SiMongodb,
    SiMqtt,
    SiMysql,
    SiNatsdotio,
    SiNginx,
-   SiNixos,
    SiNodedotjs,
    SiOpenapiinitiative,
+   SiOpenfga,
+   SiOpenjdk,
    SiPostgresql,
+   SiPrisma,
    SiPython,
    SiReact,
    SiRedis,
    SiRedux,
    SiRust,
    SiSocketdotio,
-   SiSpringboot,
    SiSqlite,
    SiSupabase,
+   SiSwift,
    SiSwagger,
    SiTailwindcss,
+   SiTemporal,
    SiTraefikproxy,
    SiTypescript,
+   SiVitest,
 };
 
 function getIcon(name: string): IconComponent | null {
@@ -158,7 +168,7 @@ export function SkillsSection() {
          <SectionHeading number="04" title="Technical Skills" />
 
          <p className="mb-[12vw] md:mb-16 max-w-2xl text-[4vw] md:text-xl leading-relaxed text-fg-secondary">
-            Comprehensive technical arsenal across mobile, distributed systems, infrastructure, and developer tooling.
+            Core competencies across native mobile, backend microservices, distributed data systems, and cloud infrastructure.
          </p>
 
          <div className="divide-y divide-border-primary">
@@ -181,12 +191,12 @@ export function SkillsSection() {
                         <span className="font-mono text-[2.3vw] md:text-xs tabular-nums text-accent">
                            {String(idx + 1).padStart(2, "0")}
                         </span>
-                        <h3 className="font-black text-[5.5vw] md:text-xl uppercase tracking-tight text-fg-primary">
+                        <h3 className="font-black text-[5vw] md:text-xl uppercase tracking-tight text-fg-primary">
                            {category.title}
                         </h3>
                      </div>
                      <span className="ml-[6vw] md:ml-8 mt-[1vw] md:mt-1.5 block font-mono text-[2.3vw] md:text-[10px] uppercase tracking-widest text-fg-muted">
-                        {category.skills.length} technologies
+                        {category.skills.length} skills
                      </span>
                   </div>
 

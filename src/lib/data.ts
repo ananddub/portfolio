@@ -2,21 +2,22 @@ export const personalInfo = {
    name: "Anand Kumar Dubey",
    role: "Software Engineer",
    tagline:
-      "Engineering 60 FPS mobile apps, high-throughput engines in Rust & Go, and scalable distributed systems.",
+      "Engineering 60 FPS mobile apps (Flutter, Jetpack Compose, SwiftUI), high-throughput systems in Go & Rust, and distributed microservices.",
    email: "duanand6@gmail.com",
-   phone: "+91 8709501726",
+   phone: "+91-9122349557",
    github: "https://github.com/ananddub",
    linkedin: "https://linkedin.com/in/ananddub/",
-   location: "India",
+   location: "Bengaluru, India",
    education: {
-      degree: "Bachelor of Computer Application (BCA)",
-      institution: "Vidya Vihar Institute of Technology",
-      period: "July 2022 – July 2025",
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Vidya Vihar Institute Of Technology",
+      period: "2022 – 2025",
+      score: "CGPA 7.7 / 10",
    },
-   bio: "Software Engineer with 1+ year of experience focused on mobile development (Flutter, React Native, Jetpack Compose), distributed backend systems (Rust, Go, gRPC, UDP), and database infrastructure. Experienced in shipping production mobile platforms to Google Play Store and engineering lock-free concurrent in-memory engines.",
+   bio: "Software Engineer based in Bengaluru, India with 1+ year of professional experience specializing in native & cross-platform mobile development (Flutter, Jetpack Compose, SwiftUI, React Native), distributed backend microservices (Go, Rust, Node.js, gRPC), and cloud databases. Experienced in shipping production mobile apps to Google Play Store and engineering real-time communication engines.",
    about: {
       intro:
-         "I am a Software Engineer who thrives at the intersection of fluid mobile user experiences and high-throughput systems architecture.",
+         "I am a Software Engineer who thrives at the intersection of fluid mobile user interfaces and scalable distributed backend architecture.",
       philosophy:
          "Great software requires uncompromising performance at the systems level and obsessive attention to detail at the user interface.",
       hobbies: [
@@ -30,20 +31,22 @@ export const personalInfo = {
 
 export const experiences = [
    {
-      period: "September 2025 – July 2026",
-      role: "Application Developer",
-      company: "Shap Digital Studios",
+      period: "Feb 2025 – April 2026",
+      role: "Mobile & Full-Stack Engineer",
+      company: "ShapTech (Remote)",
       description:
-         "Developed and deployed Equality Through Education (ETE) to Google Play Store serving students with centralized curriculum and in-app PDF rendering engine. Built ThreadNest, a responsive cross-platform community discussion forum in Flutter with Cloud Firestore, Karma scoring, and Routemaster.",
+         "• E-Commerce Platform: Built modern e-commerce mobile application using SwiftUI for iOS and Jetpack Compose for Android with seamless navigation, product listings, cart, and checkout.\n• Coin-Based Digital Wallet: Engineered scalable Flutter digital wallet application enabling coin transactions across hospitality properties with gRPC Protobuf microservices for low-latency real-time sync.\n• Equality Through Education (ETE): Shipped production-grade educational platform to Google Play Store with centralized curriculum access and in-app administrative PDF distribution dashboard.",
       technologies: [
+         "SwiftUI",
+         "Jetpack Compose",
          "Flutter",
          "Dart",
+         "gRPC",
+         "Protocol Buffers",
          "Firebase Auth",
          "Cloud Firestore",
-         "Firebase Storage",
+         "REST APIs",
          "PDF Engine",
-         "Google Play Store Live",
-         "Routemaster",
       ],
    },
    {
@@ -51,7 +54,7 @@ export const experiences = [
       role: "Mobile Application Developer (Internship)",
       company: "beyondNull",
       description:
-         "Engineered SoundPulse audio streaming application with background audio playback, notification/lock-screen controls, Zustand, and MMKV storage. Developed LudoArena 4-player multiplayer game engine with custom coordinate mapping and 60 FPS animations.",
+         "• SoundPulse: Engineered high-performance mobile audio streaming app with background playback, lock-screen controls, Zustand, and MMKV storage.\n• LudoArena: Developed 4-player cross-platform game engine with custom coordinate matrix mapping ('PlotData'), collision mechanics, and 60 FPS animations.",
       technologies: [
          "React Native",
          "TypeScript",
@@ -69,9 +72,9 @@ export const experiences = [
 export const projects = [
    {
       id: "openoxide",
-      title: "OpenOxide — Systems & Server Infrastructure Engine",
+      title: "OpenOxide — Systems & Infrastructure Orchestrator",
       description:
-         "Modular server infrastructure orchestrator in Rust with compile-time SQLx queries, Docker socket daemon API, automated WireGuard peer provisioning, and OpenAPI schema generation.",
+         "Modular server infrastructure orchestrator in Rust featuring compile-time type-checked SQLx persistence, raw Docker socket daemon management, automated WireGuard tunnels, and OpenAPI schema generators.",
       fullDescription:
          "OpenOxide is a modular server infrastructure control engine written in Rust. It manages host-level container environments via the raw Docker daemon socket, provisions automated WireGuard tunnels with dynamic keypair negotiation, and utilizes compile-time verified SQLx SQLite storage for zero-overhead node management.",
       tech: [
@@ -110,31 +113,49 @@ export const projects = [
    },
    {
       id: "incord",
-      title: "Incord — Full-Stack Real-Time Voice & Chat Platform",
+      title: "Incord (Discord Clone) — Real-Time Voice & Chat Platform",
       description:
-         "Enterprise-grade distributed Discord-like platform with Go dual-transport backend (gRPC + dedicated UDP voice) and 17+ screen Kotlin Jetpack Compose client with LiveKit WebRTC.",
+         "Built a Discord-inspired Android application with real-time messaging, voice/video calls, and guild/channel management using Kotlin and Jetpack Compose (MVVM + Clean Architecture across 15+ screens).",
       fullDescription:
-         "Incord is an end-to-end communication platform featuring a distributed Go backend with gRPC for transactional state and dedicated UDP voice server for low-latency voice packet forwarding. Backed by ScyllaDB, TimescaleDB, Redis, Redpanda Kafka, OpenFGA (RBAC), and a 17+ screen native Android client in Kotlin with Jetpack Compose, LiveKit WebRTC, and Room DB offline caching.",
+         "Features bidirectional gRPC streaming with Protocol Buffers for real-time chat, presence tracking, and state synchronization. Integrates LiveKit WebRTC SDK for low-latency voice/video calls, Hilt for dependency injection, Room for local caching, and EncryptedSharedPreferences for secure token management.",
       tech: [
-         "Go (Golang)",
-         "gRPC",
-         "UDP Voice Server",
-         "ScyllaDB",
-         "TimescaleDB",
          "Kotlin",
          "Jetpack Compose",
+         "gRPC",
          "LiveKit WebRTC",
+         "Hilt",
          "Room DB",
+         "Go (Golang)",
+         "UDP Voice Server",
+         "ScyllaDB",
       ],
       category: ["Mobile App", "Systems & Infrastructure"],
       github: "https://github.com/ananddub/incord",
       featured: true,
    },
    {
+      id: "chatconnect",
+      title: "ChatConnect — Real-Time SwiftUI & Firebase Chat App",
+      description:
+         "Developed a real-time chat application using SwiftUI and Firebase, enabling seamless one-to-one messaging, user authentication, and Cloud Firestore real-time synchronization.",
+      fullDescription:
+         "ChatConnect is a native iOS application built with Swift and SwiftUI. Implements Firebase Authentication for secure user registration, session management, and Cloud Firestore for real-time message sync with optimized data models for conversations and message history.",
+      tech: [
+         "Swift",
+         "SwiftUI",
+         "Firebase Auth",
+         "Cloud Firestore",
+         "iOS Native",
+      ],
+      category: ["Mobile App"],
+      github: "https://github.com/ananddub",
+      featured: true,
+   },
+   {
       id: "ete",
       title: "Equality Through Education (ETE) — Live Mobile Platform",
       description:
-         "Production-grade educational platform deployed on Google Play Store serving students with centralized curriculum and in-app PDF caching engine.",
+         "Production educational platform deployed on Google Play Store serving students with centralized curriculum and in-app administrative PDF distribution dashboard.",
       fullDescription:
          "Equality Through Education (ETE) is a live production mobile application deployed on the Google Play Store serving students across institutions. It features an in-app PDF rendering and caching engine with background downloading and local storage for seamless offline access, role-based authentication, and Firebase cloud data synchronization.",
       tech: [
@@ -155,7 +176,7 @@ export const projects = [
       id: "soundpulse",
       title: "SoundPulse — High-Performance Audio Streaming Mobile App",
       description:
-         "Audio streaming mobile app featuring background audio playback, notification/lock-screen controls, Zustand, and MMKV storage for instant hydration.",
+         "Audio streaming mobile app featuring background audio playback, notification/lock-screen controls, Zustand, and MMKV storage for instant state hydration.",
       fullDescription:
          "SoundPulse is a cross-platform music and audio streaming application built with React Native. Features background playback with React Native Track Player, lock-screen controls, Zustand lightweight state management, dynamic artwork color extraction, and MMKV storage for high-throughput local caching.",
       tech: [
@@ -231,127 +252,88 @@ export const projects = [
 
 export const skills = {
    languages: {
-      title: "LANGUAGES",
-      tech: "Rust, Go, TypeScript, JavaScript, Kotlin, Dart",
-      description: "Systems programming, concurrency, type safety, and multiplatform application runtimes",
+      title: "PROGRAMMING LANGUAGES",
+      tech: "JavaScript, TypeScript, Swift, Kotlin, Dart, Go, Java, Rust",
+      description: "Systems programming, concurrency, type safety, and native mobile runtimes",
    },
-   mobile: {
-      title: "MOBILE DEVELOPMENT",
-      tech: "Flutter, React Native, Jetpack Compose, Reanimated, Riverpod, Redux Toolkit, Kotlin Coroutines, Kotlin Flow, Firebase, Supabase",
-      description: "60 FPS offline-first apps, state management, background audio services, and Google Play Store deployment",
+   frontend: {
+      title: "FRONTEND & MOBILE TOOLS",
+      tech: "Flutter, Jetpack Compose, SwiftUI, Riverpod, ViewModel, Git, GitHub, Drift, Dio, React Native",
+      description: "Fluid 60 FPS UI, local caching, reactive state streams, and offline-first architecture",
    },
    backend: {
-      title: "BACKEND APIS",
-      tech: "Axum, Actix Web, Node.js, Express.js, Spring Boot, gRPC, REST, WebSocket, SSE",
-      description: "High-concurrency microservices, real-time streaming, and low-latency API architectures",
-   },
-   database: {
-      title: "DATABASES",
-      tech: "PostgreSQL, MySQL, MariaDB, SQLite, MongoDB, Redis",
-      description: "Relational modeling, lock-free caching, spatial indexes, and distributed key-value storage",
-   },
-   messaging: {
-      title: "MESSAGING & DISTRIBUTED SYSTEMS",
-      tech: "NATS, JetStream, Kafka, MQTT, Pub/Sub, Distributed Locks, Event-Driven Architecture",
-      description: "High-throughput message brokers, event streaming pipelines, and distributed consensus",
+      title: "BACKEND & MICROSERVICES",
+      tech: "Node.js, Express.js, MongoDB, JWT, REST APIs, Microservices, gRPC, MySQL, Postgres, Cassandra, S3, OpenFGA, Materialize, Temporal, Actix, Prisma, Drizzle",
+      description: "High-concurrency microservices, gRPC Protobuf streaming, and scalable distributed storage",
    },
    devops: {
-      title: "DEVOPS & INFRASTRUCTURE",
-      tech: "Docker, Kubernetes, Docker Swarm, Nginx, Traefik, Caddy, AWS EC2, GitHub Actions, CI/CD, SSH, Linux, cgroups",
-      description: "Container orchestration, reverse proxies, automated pipelines, and Linux kernel isolation",
+      title: "DEVOPS & CLOUD INFRASTRUCTURE",
+      tech: "Kafka, Redis, NATS, Docker, Kubernetes, Jenkins, AWS, Nginx, Ansible, Traefik",
+      description: "Container orchestration, automated CI/CD, reverse proxies, and event streaming brokers",
    },
-   deployment: {
-      title: "BUILD & DEPLOYMENT",
-      tech: "Dockerfile, Docker CLI, Nixpacks, Railpack, Buildpacks, Git-based Deployment",
-      description: "Reproducible container builds, multi-stage compilation, and automated production pipelines",
-   },
-   tools: {
-      title: "DEVELOPER TOOLS",
-      tech: "Git, GitHub, GitLab, Gitea, Bash, Linux CLI, OpenAPI, Swagger",
-      description: "Version control workflows, shell automation, API contracts, and schema generation",
+   testing: {
+      title: "TESTING & QUALITY ASSURANCE",
+      tech: "Testcontainers, Vitest, TDD, Multi-threaded Stress Testing",
+      description: "Automated containerized integration testing, unit test suites, and race condition verification",
    },
 };
 
 export const technologies = [
-   // 1. Languages
-   { name: "Rust", category: "Languages", icon: "SiRust", color: "#CE412B" },
-   { name: "Go", category: "Languages", icon: "SiGo", color: "#00ADD8" },
-   { name: "TypeScript", category: "Languages", icon: "SiTypescript", color: "#3178C6" },
-   { name: "JavaScript", category: "Languages", icon: "SiJavascript", color: "#F7DF1E" },
-   { name: "Kotlin", category: "Languages", icon: "SiKotlin", color: "#7F52FF" },
-   { name: "Dart", category: "Languages", icon: "SiDart", color: "#0175C2" },
+   // 1. Programming Languages
+   { name: "JavaScript", category: "Programming Languages", icon: "SiJavascript", color: "#F7DF1E" },
+   { name: "TypeScript", category: "Programming Languages", icon: "SiTypescript", color: "#3178C6" },
+   { name: "Swift", category: "Programming Languages", icon: "SiSwift", color: "#F05138" },
+   { name: "Kotlin", category: "Programming Languages", icon: "SiKotlin", color: "#7F52FF" },
+   { name: "Dart", category: "Programming Languages", icon: "SiDart", color: "#0175C2" },
+   { name: "Go", category: "Programming Languages", icon: "SiGo", color: "#00ADD8" },
+   { name: "Java", category: "Programming Languages", icon: "SiOpenjdk", color: "#ED8B00" },
+   { name: "Rust", category: "Programming Languages", icon: "SiRust", color: "#CE412B" },
 
-   // 2. Mobile Development
-   { name: "Flutter", category: "Mobile Development", icon: "SiFlutter", color: "#02569B" },
-   { name: "React Native", category: "Mobile Development", icon: "SiReact", color: "#61DAFB" },
-   { name: "Jetpack Compose", category: "Mobile Development", icon: "SiAndroid", color: "#3DDC84" },
-   { name: "Reanimated", category: "Mobile Development", icon: "SiReact", color: "#61DAFB" },
-   { name: "Riverpod", category: "Mobile Development", icon: "SiFlutter", color: "#02569B" },
-   { name: "Redux Toolkit", category: "Mobile Development", icon: "SiRedux", color: "#764ABC" },
-   { name: "Kotlin Coroutines", category: "Mobile Development", icon: "SiKotlin", color: "#7F52FF" },
-   { name: "Kotlin Flow", category: "Mobile Development", icon: "SiKotlin", color: "#7F52FF" },
-   { name: "Firebase", category: "Mobile Development", icon: "SiFirebase", color: "#DD2C00" },
-   { name: "Supabase", category: "Mobile Development", icon: "SiSupabase", color: "#3ECF8E" },
+   // 2. Frontend & Tools
+   { name: "Flutter", category: "Frontend & Mobile Tools", icon: "SiFlutter", color: "#02569B" },
+   { name: "Jetpack Compose", category: "Frontend & Mobile Tools", icon: "SiJetpackcompose", color: "#4285F4" },
+   { name: "SwiftUI", category: "Frontend & Mobile Tools", icon: "SiSwift", color: "#F05138" },
+   { name: "React Native", category: "Frontend & Mobile Tools", icon: "SiReact", color: "#61DAFB" },
+   { name: "Riverpod", category: "Frontend & Mobile Tools", icon: "SiFlutter", color: "#02569B" },
+   { name: "ViewModel", category: "Frontend & Mobile Tools", icon: "SiAndroid", color: "#3DDC84" },
+   { name: "Drift", category: "Frontend & Mobile Tools", icon: "SiFlutter", color: "#02569B" },
+   { name: "Dio", category: "Frontend & Mobile Tools", icon: "SiDart", color: "#0175C2" },
+   { name: "Redux Toolkit", category: "Frontend & Mobile Tools", icon: "SiRedux", color: "#764ABC" },
 
-   // 3. Backend APIs
-   { name: "Axum", category: "Backend APIs", icon: "SiRust", color: "#CE412B" },
-   { name: "Actix Web", category: "Backend APIs", icon: "SiRust", color: "#CE412B" },
-   { name: "Node.js", category: "Backend APIs", icon: "SiNodedotjs", color: "#339933" },
-   { name: "Express.js", category: "Backend APIs", icon: "SiExpress", color: "#000000" },
-   { name: "Spring Boot", category: "Backend APIs", icon: "SiSpringboot", color: "#6DB33F" },
-   { name: "gRPC", category: "Backend APIs", icon: "SiGo", color: "#244C5A" },
-   { name: "REST APIs", category: "Backend APIs", icon: "SiFastapi", color: "#009688" },
-   { name: "WebSocket", category: "Backend APIs", icon: "SiSocketdotio", color: "#010101" },
-   { name: "SSE", category: "Backend APIs", icon: "SiNodedotjs", color: "#339933" },
+   // 3. Backend & Microservices
+   { name: "Node.js", category: "Backend & Microservices", icon: "SiNodedotjs", color: "#339933" },
+   { name: "Express.js", category: "Backend & Microservices", icon: "SiExpress", color: "#000000" },
+   { name: "gRPC", category: "Backend & Microservices", icon: "SiGo", color: "#244C5A" },
+   { name: "REST APIs", category: "Backend & Microservices", icon: "SiFastapi", color: "#009688" },
+   { name: "Microservices", category: "Backend & Microservices", icon: "SiDocker", color: "#2496ED" },
+   { name: "PostgreSQL", category: "Backend & Microservices", icon: "SiPostgresql", color: "#4169E1" },
+   { name: "MySQL", category: "Backend & Microservices", icon: "SiMysql", color: "#4479A1" },
+   { name: "MongoDB", category: "Backend & Microservices", icon: "SiMongodb", color: "#47A248" },
+   { name: "Cassandra / ScyllaDB", category: "Backend & Microservices", icon: "SiApachecassandra", color: "#556880" },
+   { name: "AWS S3", category: "Backend & Microservices", icon: "SiAmazonwebservices", color: "#FF9900" },
+   { name: "OpenFGA", category: "Backend & Microservices", icon: "SiOpenfga", color: "#101828" },
+   { name: "Materialize", category: "Backend & Microservices", icon: "SiMaterialdesign", color: "#757575" },
+   { name: "Temporal", category: "Backend & Microservices", icon: "SiTemporal", color: "#000000" },
+   { name: "Actix", category: "Backend & Microservices", icon: "SiRust", color: "#CE412B" },
+   { name: "Prisma", category: "Backend & Microservices", icon: "SiPrisma", color: "#2D3748" },
+   { name: "Drizzle", category: "Backend & Microservices", icon: "SiDrizzle", color: "#C5F74F" },
 
-   // 4. Databases
-   { name: "PostgreSQL", category: "Databases", icon: "SiPostgresql", color: "#4169E1" },
-   { name: "MySQL", category: "Databases", icon: "SiMysql", color: "#4479A1" },
-   { name: "MariaDB", category: "Databases", icon: "SiMariadb", color: "#003545" },
-   { name: "SQLite", category: "Databases", icon: "SiSqlite", color: "#003B57" },
-   { name: "MongoDB", category: "Databases", icon: "SiMongodb", color: "#47A248" },
-   { name: "Redis", category: "Databases", icon: "SiRedis", color: "#DC382D" },
+   // 4. DevOps & Cloud Infrastructure
+   { name: "Kafka", category: "DevOps & Cloud", icon: "SiApachekafka", color: "#231F20" },
+   { name: "Redis", category: "DevOps & Cloud", icon: "SiRedis", color: "#DC382D" },
+   { name: "NATS", category: "DevOps & Cloud", icon: "SiNatsdotio", color: "#27ADEA" },
+   { name: "Docker", category: "DevOps & Cloud", icon: "SiDocker", color: "#2496ED" },
+   { name: "Kubernetes", category: "DevOps & Cloud", icon: "SiKubernetes", color: "#326CE5" },
+   { name: "Jenkins", category: "DevOps & Cloud", icon: "SiJenkins", color: "#D24939" },
+   { name: "AWS", category: "DevOps & Cloud", icon: "SiAmazonwebservices", color: "#FF9900" },
+   { name: "Nginx", category: "DevOps & Cloud", icon: "SiNginx", color: "#009639" },
+   { name: "Ansible", category: "DevOps & Cloud", icon: "SiAnsible", color: "#EE0000" },
+   { name: "Traefik", category: "DevOps & Cloud", icon: "SiTraefikproxy", color: "#24A1C1" },
+   { name: "GitHub Actions", category: "DevOps & Cloud", icon: "SiGithubactions", color: "#2088FF" },
 
-   // 5. Messaging Distributed Systems
-   { name: "NATS", category: "Messaging Distributed Systems", icon: "SiNatsdotio", color: "#27ADEA" },
-   { name: "JetStream", category: "Messaging Distributed Systems", icon: "SiNatsdotio", color: "#27ADEA" },
-   { name: "Kafka", category: "Messaging Distributed Systems", icon: "SiApachekafka", color: "#231F20" },
-   { name: "MQTT", category: "Messaging Distributed Systems", icon: "SiMqtt", color: "#660066" },
-   { name: "Pub/Sub", category: "Messaging Distributed Systems", icon: "SiRedis", color: "#DC382D" },
-   { name: "Distributed Locks", category: "Messaging Distributed Systems", icon: "SiRedis", color: "#DC382D" },
-   { name: "Event-Driven Architecture", category: "Messaging Distributed Systems", icon: "SiApachekafka", color: "#231F20" },
-
-   // 6. DevOps Infrastructure
-   { name: "Docker", category: "DevOps Infrastructure", icon: "SiDocker", color: "#2496ED" },
-   { name: "Kubernetes", category: "DevOps Infrastructure", icon: "SiKubernetes", color: "#326CE5" },
-   { name: "Docker Swarm", category: "DevOps Infrastructure", icon: "SiDocker", color: "#2496ED" },
-   { name: "Nginx", category: "DevOps Infrastructure", icon: "SiNginx", color: "#009639" },
-   { name: "Traefik", category: "DevOps Infrastructure", icon: "SiTraefikproxy", color: "#24A1C1" },
-   { name: "Caddy", category: "DevOps Infrastructure", icon: "SiCaddy", color: "#22B573" },
-   { name: "AWS EC2", category: "DevOps Infrastructure", icon: "SiAmazonwebservices", color: "#FF9900" },
-   { name: "GitHub Actions", category: "DevOps Infrastructure", icon: "SiGithubactions", color: "#2088FF" },
-   { name: "CI/CD", category: "DevOps Infrastructure", icon: "SiGithubactions", color: "#2088FF" },
-   { name: "SSH", category: "DevOps Infrastructure", icon: "SiLinux", color: "#FCC624" },
-   { name: "Linux", category: "DevOps Infrastructure", icon: "SiLinux", color: "#FCC624" },
-   { name: "cgroups", category: "DevOps Infrastructure", icon: "SiLinux", color: "#FCC624" },
-
-   // 7. Build Deployment
-   { name: "Dockerfile", category: "Build Deployment", icon: "SiDocker", color: "#2496ED" },
-   { name: "Docker CLI", category: "Build Deployment", icon: "SiDocker", color: "#2496ED" },
-   { name: "Nixpacks", category: "Build Deployment", icon: "SiNixos", color: "#5277C3" },
-   { name: "Railpack", category: "Build Deployment", icon: "SiNixos", color: "#5277C3" },
-   { name: "Buildpacks", category: "Build Deployment", icon: "SiDocker", color: "#2496ED" },
-   { name: "Git-based Deployment", category: "Build Deployment", icon: "SiGit", color: "#F05032" },
-
-   // 8. Developer Tools
-   { name: "Git", category: "Developer Tools", icon: "SiGit", color: "#F05032" },
-   { name: "GitHub", category: "Developer Tools", icon: "SiGithub", color: "#181717" },
-   { name: "GitLab", category: "Developer Tools", icon: "SiGitlab", color: "#FC6D26" },
-   { name: "Gitea", category: "Developer Tools", icon: "SiGitea", color: "#609926" },
-   { name: "Bash", category: "Developer Tools", icon: "SiGnubash", color: "#4EAA25" },
-   { name: "Linux CLI", category: "Developer Tools", icon: "SiLinux", color: "#FCC624" },
-   { name: "OpenAPI", category: "Developer Tools", icon: "SiOpenapiinitiative", color: "#6BA539" },
-   { name: "Swagger", category: "Developer Tools", icon: "SiSwagger", color: "#85EA2D" },
+   // 5. Testing & Quality Assurance
+   { name: "Testcontainers", category: "Testing & QA", icon: "SiDocker", color: "#2B7A78" },
+   { name: "Vitest", category: "Testing & QA", icon: "SiVitest", color: "#6E9F18" },
 ];
 
 export const openSourceRepos = [
@@ -380,11 +362,11 @@ export const openSourceRepos = [
    {
       name: "incord",
       description:
-         "Enterprise-grade distributed Discord backend in Go (gRPC + UDP voice) + Jetpack Compose Android client. ScyllaDB, TimescaleDB, Redis, Redpanda, OpenFGA, and 171 automated tests.",
+         "Discord clone Android app in Kotlin (Jetpack Compose, MVVM + Clean Architecture) + distributed Go backend (gRPC + UDP voice). ScyllaDB, TimescaleDB, Redis, Redpanda.",
       url: "https://github.com/ananddub/incord",
       isrelease: true,
-      language: ["Go", "Kotlin", "Protobuf"],
-      topics: ["grpc", "udp", "webrtc", "scylladb", "jetpack-compose"],
+      language: ["Kotlin", "Go", "Protobuf"],
+      topics: ["grpc", "udp", "webrtc", "jetpack-compose", "hilt"],
       stars: true,
       forks: true,
    },
@@ -437,25 +419,25 @@ export const openSourceRepos = [
 export const services = [
    {
       id: 1,
-      title: "Cross-Platform Mobile Apps",
+      title: "Native & Cross-Platform Mobile Apps",
       description:
-         "High-performance mobile apps built with Flutter and React Native. Fluid 60 FPS UI, offline-first caching, background audio services, and Google Play Store production deployment.",
+         "High-performance mobile applications built with Flutter, Jetpack Compose, SwiftUI, and React Native. Fluid 60 FPS UI, offline-first caching, background services, and Google Play Store production deployment.",
       icon: "Smartphone",
       features: [
-         "Flutter & React Native",
-         "Native Android (Compose)",
-         "Offline Storage (MMKV/Room)",
-         "Google Play Store Deploy",
+         "Flutter, SwiftUI & Jetpack Compose",
+         "React Native & TypeScript",
+         "Offline Storage (MMKV/Room/Drift)",
+         "Google Play Store Deployment",
       ],
    },
    {
       id: 2,
-      title: "High-Throughput Backends",
+      title: "High-Throughput Microservices",
       description:
-         "Scalable backend architectures written in Go and Rust. Low-latency gRPC APIs, dedicated UDP voice protocols, and real-time WebSocket communication.",
+         "Scalable backend architectures written in Go, Rust, and Node.js. Low-latency gRPC APIs with Protocol Buffers, dedicated UDP voice protocols, and real-time WebSockets.",
       icon: "Server",
       features: [
-         "Rust (Axum/Tokio) & Go (gRPC)",
+         "Go (gRPC) & Rust (Tokio/Actix)",
          "gRPC & Protocol Buffers",
          "UDP Voice Socket Engines",
          "Distributed Pub/Sub & NATS",
@@ -463,28 +445,28 @@ export const services = [
    },
    {
       id: 3,
-      title: "Distributed Databases & Messaging",
+      title: "Distributed Databases & Storage",
       description:
-         "Designing resilient data layers with PostgreSQL, ScyllaDB, Redis caching, NATS JetStream, and Kafka message brokers.",
+         "Designing resilient data layers with PostgreSQL, MySQL, Cassandra/ScyllaDB, Redis caching, NATS JetStream, and Kafka event streaming brokers.",
       icon: "Globe",
       features: [
-         "PostgreSQL, MySQL & SQLite",
-         "Redis & ScyllaDB Caching",
-         "NATS JetStream & Kafka",
-         "Distributed Locks & Sharding",
+         "PostgreSQL, MySQL & MongoDB",
+         "Cassandra / ScyllaDB & Redis",
+         "Kafka & NATS JetStream",
+         "Prisma, Drizzle & SQLx ORMs",
       ],
    },
    {
       id: 4,
-      title: "DevOps & Infrastructure",
+      title: "DevOps, Cloud & QA",
       description:
-         "Containerization with Docker Swarm, Kubernetes orchestration, reverse proxies (Nginx, Traefik, Caddy), and automated CI/CD pipelines.",
+         "Containerization with Docker, Kubernetes orchestration, reverse proxies (Nginx, Traefik, Caddy), Jenkins automation, Ansible, and Testcontainers TDD test suites.",
       icon: "Brain",
       features: [
-         "Docker & Kubernetes",
-         "Nginx, Traefik & Caddy",
-         "GitHub Actions CI/CD",
-         "Nixpacks & Linux CLI",
+         "Docker & Kubernetes Orchestration",
+         "Nginx, Traefik & Ansible",
+         "Jenkins & GitHub Actions CI/CD",
+         "Testcontainers & Vitest QA",
       ],
    },
 ];
