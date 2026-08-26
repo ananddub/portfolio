@@ -2,7 +2,7 @@ export const personalInfo = {
    name: "Anand Kumar Dubey",
    role: "Software Engineer",
    tagline:
-      "Engineering 60 FPS mobile apps (Flutter, Jetpack Compose, SwiftUI), high-throughput systems in Go & Rust, and distributed microservices.",
+      "Engineering 60 FPS mobile apps (Flutter, Jetpack ComposeUI), high-throughput systems in Go & Rust, and distributed microservices.",
    email: "duanand6@gmail.com",
    phone: "+91-9122349557",
    github: "https://github.com/ananddub",
@@ -14,7 +14,7 @@ export const personalInfo = {
       period: "2022 – 2025",
       score: "CGPA 7.7 / 10",
    },
-   bio: "Software Engineer based in Bengaluru, India with 1+ year of professional experience specializing in native & cross-platform mobile development (Flutter, Jetpack Compose, SwiftUI, React Native), distributed backend microservices (Go, Rust, Node.js, gRPC), and cloud databases. Experienced in shipping production mobile apps to Google Play Store and engineering real-time communication engines.",
+   bio: "Software Engineer based in Bengaluru, India with 1+ year of professional experience specializing in native & cross-platform mobile development (Flutter, Jetpack ComposeUI, React Native), distributed backend microservices (Go, Rust, Node.js, gRPC), and cloud databases. Experienced in shipping production mobile apps to Google Play Store and engineering real-time communication engines.",
    about: {
       intro:
          "I am a Software Engineer who thrives at the intersection of fluid mobile user interfaces and scalable distributed backend architecture.",
@@ -235,12 +235,12 @@ export const projects = [
 export const skills = {
    languages: {
       title: "PROGRAMMING LANGUAGES",
-      tech: "JavaScript, TypeScript, Swift, Kotlin, Dart, Go, Java, Rust",
+      tech: "JavaScript, TypeScript, Kotlin, Dart, Go, Java, Rust",
       description: "Systems programming, concurrency, type safety, and native mobile runtimes",
    },
    frontend: {
       title: "FRONTEND & MOBILE TOOLS",
-      tech: "Flutter, Jetpack Compose, SwiftUI, Riverpod, ViewModel, Git, GitHub, Drift, Dio, React Native",
+      tech: "Flutter, Jetpack ComposeUI, Riverpod, ViewModel, Git, GitHub, Drift, Dio, React Native",
       description: "Fluid 60 FPS UI, local caching, reactive state streams, and offline-first architecture",
    },
    backend: {
@@ -264,7 +264,7 @@ export const technologies = [
    // 1. Programming Languages
    { name: "JavaScript", category: "Programming Languages", icon: "SiJavascript", color: "#F7DF1E" },
    { name: "TypeScript", category: "Programming Languages", icon: "SiTypescript", color: "#3178C6" },
-   { name: "Swift", category: "Programming Languages", icon: "SiSwift", color: "#F05138" },
+   
    { name: "Kotlin", category: "Programming Languages", icon: "SiKotlin", color: "#7F52FF" },
    { name: "Dart", category: "Programming Languages", icon: "SiDart", color: "#0175C2" },
    { name: "Go", category: "Programming Languages", icon: "SiGo", color: "#00ADD8" },
@@ -274,7 +274,7 @@ export const technologies = [
    // 2. Frontend & Tools
    { name: "Flutter", category: "Frontend & Mobile Tools", icon: "SiFlutter", color: "#02569B" },
    { name: "Jetpack Compose", category: "Frontend & Mobile Tools", icon: "SiJetpackcompose", color: "#4285F4" },
-   { name: "SwiftUI", category: "Frontend & Mobile Tools", icon: "SiSwift", color: "#F05138" },
+   
    { name: "React Native", category: "Frontend & Mobile Tools", icon: "SiReact", color: "#61DAFB" },
    { name: "Riverpod", category: "Frontend & Mobile Tools", icon: "SiFlutter", color: "#02569B" },
    { name: "ViewModel", category: "Frontend & Mobile Tools", icon: "SiAndroid", color: "#3DDC84" },
@@ -403,10 +403,10 @@ export const services = [
       id: 1,
       title: "Native & Cross-Platform Mobile Apps",
       description:
-         "High-performance mobile applications built with Flutter, Jetpack Compose, SwiftUI, and React Native. Fluid 60 FPS UI, offline-first caching, background services, and Google Play Store production deployment.",
+         "High-performance mobile applications built with Flutter, Jetpack ComposeUI, and React Native. Fluid 60 FPS UI, offline-first caching, background services, and Google Play Store production deployment.",
       icon: "Smartphone",
       features: [
-         "Flutter, SwiftUI & Jetpack Compose",
+         "FlutterUI & Jetpack Compose",
          "React Native & TypeScript",
          "Offline Storage (MMKV/Room/Drift)",
          "Google Play Store Deployment",
