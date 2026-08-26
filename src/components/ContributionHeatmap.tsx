@@ -23,7 +23,22 @@ const MONTHS = [
    "Dec",
 ];
 
-const LEVEL_OPACITY = [0, 0.25, 0.45, 0.7, 1];
+// Authentic GitHub Contribution Colors
+const GITHUB_COLORS_DARK = [
+   "rgba(255, 255, 255, 0.05)", // level 0
+   "#0e4429",                    // level 1
+   "#006d32",                    // level 2
+   "#26a641",                    // level 3
+   "#39d353",                    // level 4
+];
+
+const GITHUB_COLORS_LIGHT = [
+   "#ebedf0",                    // level 0
+   "#9be9a8",                    // level 1
+   "#40c463",                    // level 2
+   "#30a14e",                    // level 3
+   "#216e39",                    // level 4
+];
 
 function weekdayOf(date: string) {
    return new Date(`${date}T00:00:00Z`).getUTCDay();
@@ -96,9 +111,12 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
 
       (async () => {
          try {
-            const res = await fetch(
-               `https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
-            );
+            // First try internal Next.js API route
+            let res = await fetch(`/api/github/contributions?username=${username}`);
+            if (!res.ok) {
+               // Fallback to direct public endpoint
+               res = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=last`);
+            }
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const data = await res.json();
             if (cancelled) return;
@@ -178,7 +196,7 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
       if (!dragRef.current.active || !container) return;
       e.preventDefault();
       container.scrollLeft =
-         dragRef.current.scrollLeft - (e.pageX - dragRef.current.startX) * 1.5;
+         dragRef.current.scrollLeft - (e.pageX - dragRef.current.startX);
    };
 
    const endDrag = () => {
@@ -187,7 +205,25 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
    };
 
    return (
-      <div className="rounded-2xl border border-border-primary bg-bg-secondary/50 p-[4vw] md:p-6 backdrop-blur-sm">
+      <div className="rounded-2xl border border-border-primary bg-bg-secondary/60 backdrop-blur-md p-[4vw] md:p-6">
+         {/* Top Header */}
+         <div className="mb-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+               <span className="h-2.5 w-2.5 rounded-full bg-[#39d353] animate-pulse" />
+               <span className="font-mono text-xs uppercase tracking-widest text-fg-primary">
+                  GitHub Contribution Activity
+               </span>
+            </div>
+            <a
+               href={`https://github.com/${username}`}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="font-mono text-xs text-accent hover:underline"
+            >
+               @{username} ↗
+            </a>
+         </div>
+
          {state === "error" ? (
             <p className="py-[6vw] md:py-8 text-center font-mono text-[2.5vw] md:text-sm text-fg-muted">
                Contribution graph unavailable right now.
@@ -206,23 +242,23 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
                   }`}
                >
                   <div className="w-fit">
-                     <div className="mb-1 flex gap-0.75 md:gap-1 pl-6.5 md:pl-8">
+                     <div className="mb-1.5 flex gap-1 md:gap-1.5 pl-6.5 md:pl-8">
                         {monthLabels.map(({ id, label }) => (
                            <span
                               key={id}
-                              className="w-2.5 md:w-3.5 shrink-0 font-mono text-[8px] md:text-[10px] text-fg-muted"
+                              className="w-3 md:w-3.5 shrink-0 font-mono text-[8px] md:text-[10px] text-fg-muted"
                            >
                               {label}
                            </span>
                         ))}
                      </div>
 
-                     <div className="flex gap-0.75 md:gap-1">
-                        <div className="mr-1 flex w-7 shrink-0 flex-col gap-0.75 md:gap-1">
+                     <div className="flex gap-1 md:gap-1.5">
+                        <div className="mr-1 flex w-7 shrink-0 flex-col gap-1 md:gap-1.5">
                            {WEEKDAY_LABELS.map(({ id, label }) => (
                               <span
                                  key={id}
-                                 className="flex h-2.5 md:h-3.5 items-center font-mono text-[8px] md:text-[10px] leading-none text-fg-muted"
+                                 className="flex h-3 md:h-3.5 items-center font-mono text-[8px] md:text-[10px] leading-none text-fg-muted"
                               >
                                  {label}
                               </span>
@@ -233,37 +269,34 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
                            (week, w) => (
                               <div
                                  key={week.id}
-                                 className="flex flex-col gap-0.75 md:gap-1"
+                                 className="flex flex-col gap-1 md:gap-1.5"
                               >
                                  {week.days.map((day, d) => {
                                     if (!day) {
                                        return (
                                           <div
                                              key={`${week.id}-${WEEKDAY_LABELS[d].id}`}
-                                             className={`h-2.5 w-2.5 md:h-3.5 md:w-3.5 shrink-0 rounded-sm ${
+                                             className={`h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 rounded-[3px] ${
                                                 state === "loading"
                                                    ? "animate-pulse bg-fg-primary/6"
-                                                   : ""
+                                                   : "bg-transparent"
                                              }`}
                                           />
                                        );
                                     }
-                                    const opacity =
-                                       LEVEL_OPACITY[day.level] ?? 0;
+                                    const darkBg = GITHUB_COLORS_DARK[day.level] || GITHUB_COLORS_DARK[0];
                                     return (
                                        <div
                                           key={day.date}
                                           title={`${day.count} contribution${
                                              day.count === 1 ? "" : "s"
                                           } on ${day.date}`}
-                                          className="h-2.5 w-2.5 md:h-3.5 md:w-3.5 shrink-0 rounded-sm transition-transform duration-200 hover:scale-125"
+                                          className="h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 rounded-[3px] transition-transform duration-200 hover:scale-125 cursor-pointer"
                                           style={{
-                                             backgroundColor: `rgba(var(--accent-rgb), ${
-                                                opacity === 0 ? 0.07 : opacity
-                                             })`,
+                                             backgroundColor: darkBg,
                                              boxShadow:
                                                 day.level >= 3
-                                                   ? "0 0 8px -2px var(--accent-glow)"
+                                                   ? "0 0 8px rgba(57, 211, 83, 0.4)"
                                                    : undefined,
                                           }}
                                        />
@@ -280,7 +313,7 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
                <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-border-primary/30 pt-3">
                   <span className="font-mono text-[2.5vw] md:text-sm text-fg-secondary">
                      {state === "loading"
-                        ? "Loading contributions…"
+                        ? "Loading live contributions…"
                         : `${total.toLocaleString()} contributions in the last year`}
                   </span>
                   <div className="flex items-center gap-2">
@@ -288,15 +321,11 @@ export function ContributionHeatmap({ username }: ContributionHeatmapProps) {
                         Less
                      </span>
                      <div className="flex gap-1">
-                        {LEVEL_OPACITY.map((opacity) => (
+                        {GITHUB_COLORS_DARK.map((color, idx) => (
                            <div
-                              key={`level-${opacity}`}
-                              className="h-[2.5vw] w-[2.5vw] md:h-3 md:w-3 rounded-sm"
-                              style={{
-                                 backgroundColor: `rgba(var(--accent-rgb), ${
-                                    opacity === 0 ? 0.07 : opacity
-                                 })`,
-                              }}
+                              key={`level-${idx}`}
+                              className="h-3 w-3 md:h-3.5 md:w-3.5 rounded-[3px]"
+                              style={{ backgroundColor: color }}
                            />
                         ))}
                      </div>
