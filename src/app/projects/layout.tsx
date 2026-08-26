@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-   title: "Projects - Anand Dubey | Full Stack Developer Portfolio",
+   title: "Projects - Anand Kumar Dubey | Software Engineer Portfolio",
    description:
-      "Explore my portfolio of 13+ production applications including OmniAI, CareerWise, PeerDrop, and more. Built with React, Next.js, Go, Python, and AI/ML technologies.",
+      "Explore engineering projects including OpenOxide, FerroDB, Incord, ETE, SoundPulse, and CartWave. Built with Rust, Go, Flutter, React Native, and Kotlin.",
    openGraph: {
-      title: "Projects - Anand Dubey | Full Stack Developer Portfolio",
+      title: "Projects - Anand Kumar Dubey | Software Engineer Portfolio",
       description:
-         "Explore my portfolio of 13+ production applications including OmniAI, CareerWise, PeerDrop, and more.",
-      url: "https://ananddub.dev/projects",
-   },
-   twitter: {
-      title: "Projects - Anand Dubey | Full Stack Developer Portfolio",
-      description:
-         "Explore my portfolio of 13+ production applications including OmniAI, CareerWise, PeerDrop, and more.",
+         "Explore engineering projects including OpenOxide, FerroDB, Incord, ETE, SoundPulse, and CartWave.",
+      url: "https://portfolio-rho-gold-2auz6r1v9x.vercel.app/projects",
    },
    alternates: {
-      canonical: "https://ananddub.dev/projects",
+      canonical: "https://portfolio-rho-gold-2auz6r1v9x.vercel.app/projects",
    },
 };
 

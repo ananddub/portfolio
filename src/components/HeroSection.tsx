@@ -131,7 +131,7 @@ export function HeroSection() {
                      },
                   }}
                >
-                  <StatCounter end={3} suffix="+" label="Years Exp" delay={0} />
+                  <StatCounter end={1} suffix="+" label="Years Exp" delay={0} />
                   <StatCounter
                      end={17}
                      suffix="+"
